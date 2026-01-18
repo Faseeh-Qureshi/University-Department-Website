@@ -1,0 +1,32 @@
+{
+  "name": "university-cs-dept-website",
+  "version": "1.0.0",
+  "description": "Computer Science Department Static Website with DevOps Implementation",
+  "main": "index.js",
+  "scripts": {
+    "lint:html": "html-validate 'src/**/*.html'",
+    "lint:css": "stylelint 'src/**/*.css'",
+    "lint": "npm run lint:html && npm run lint:css",
+    "docker:build": "docker build -t university-cs-dept:latest .",
+    "docker:run": "docker run -p 8080:80 university-cs-dept:latest",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "devops",
+    "docker",
+    "ci-cd",
+    "github-actions",
+    "website"
+  ],
+  "author": "Computer Science Department",
+  "license": "MIT",
+  "devDependencies": {
+    "html-validate": "^8.0.0",
+    "stylelint": "^15.0.0",
+    "stylelint-config-standard": "^34.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/University-Department-Website.git"
+  }
+}

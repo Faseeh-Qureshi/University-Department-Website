@@ -1,0 +1,75 @@
+name: CI - Lint & Build Docker Image
+
+on:
+  push:
+    branches:
+      - develop
+      - 'release/**'
+      - main
+  pull_request:
+    branches:
+      - develop
+      - 'release/**'
+      - main
+
+jobs:
+  lint:
+    name: HTML/CSS Linting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install --save-dev html-validate stylelint stylelint-config-standard
+
+      - name: Lint HTML files
+        run: npx html-validate 'src/**/*.html'
+        continue-on-error: true
+
+      - name: Create stylelint config
+        run: |
+          cat > .stylelintrc.json << 'EOF'
+          {
+            "extends": "stylelint-config-standard",
+            "rules": {
+              "no-empty-source": null
+            }
+          }
+          EOF
+
+      - name: Lint CSS files
+        run: npx stylelint 'src/**/*.css'
+        continue-on-error: true
+
+      - name: Report linting results
+        if: always()
+        run: echo "HTML and CSS linting completed. Check logs for details."
+
+  build:
+    name: Build Docker Image
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: false
+          tags: university-cs-dept:${{ github.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Log build success
+        run: echo "Docker image build successful for commit ${{ github.sha }}"

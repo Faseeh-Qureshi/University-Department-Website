@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Computer Science Department</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1>CS Department</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html" class="active">Courses</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Our Course Offerings</h1>
+            <p>Comprehensive Computer Science Curriculum</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="courses-section">
+            <p class="intro-text">We offer a comprehensive range of courses designed to build strong foundational knowledge and advanced expertise in computer science.</p>
+
+            <!-- Core Courses -->
+            <h2>Core Courses</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <h3>Introduction to Programming</h3>
+                    <p class="semester">Available: Fall, Spring</p>
+                    <p>Fundamentals of programming using Python. Topics include variables, data types, control flow, functions, and basic data structures.</p>
+                </div>
+
+                <div class="course-card">
+                    <h3>Data Structures & Algorithms</h3>
+                    <p class="semester">Available: Spring, Summer</p>
+                    <p>In-depth study of essential data structures and algorithmic problem-solving techniques. Includes arrays, linked lists, trees, and sorting algorithms.</p>
+                </div>
+
+                <div class="course-card">
+                    <h3>Database Management Systems</h3>
+                    <p class="semester">Available: Fall, Spring</p>
+                    <p>Design and implementation of relational databases. SQL queries, normalization, transaction management, and database security.</p>
+                </div>
+
+                <div class="course-card">
+                    <h3>Web Development</h3>
+                    <p class="semester">Available: Spring, Summer</p>
+                    <p>Full-stack web development including HTML, CSS, JavaScript, and backend frameworks. Covers responsive design and modern web practices.</p>
+                </div>
+            </div>
+
+            <!-- Advanced Courses -->
+            <h2>Advanced Courses</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <h3>Artificial Intelligence</h3>
+                    <p class="semester">Available: Fall</p>
+                    <p>Fundamentals of AI including search algorithms, machine learning basics, neural networks, and natural language processing.</p>
+                </div>
+
+                <div class="course-card">
+                    <h3>Cybersecurity Fundamentals</h3>
+                    <p class="semester">Available: Spring</p>
+                    <p>Network security, cryptography, ethical hacking, and security protocols. Hands-on labs and real-world security scenarios.</p>
+                </div>
+
+                <div class="course-card">
+                    <h3>Cloud Computing & DevOps</h3>
+                    <p class="semester">Available: Summer</p>
+                    <p>Cloud platforms, containerization, CI/CD pipelines, and infrastructure as code. Practical experience with AWS and Docker.</p>
+                </div>
+
+                <div class="course-card">
+                    <h3>Software Engineering</h3>
+                    <p class="semester">Available: Fall, Spring</p>
+                    <p>Software development lifecycle, design patterns, testing methodologies, and project management in large-scale applications.</p>
+                </div>
+            </div>
+
+            <!-- Elective Courses -->
+            <h2>Elective Courses</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <h3>Mobile App Development</h3>
+                    <p class="semester">Available: Spring, Summer</p>
+                    <p>Building native and cross-platform mobile applications. Covers Android, iOS, and Flutter development frameworks.</p>
+                </div>
+
+                <div class="course-card">
+                    <h3>Game Development</h3>
+                    <p class="semester">Available: Fall</p>
+                    <p>Game design principles and implementation using modern game engines. 2D and 3D game development techniques.</p>
+                </div>
+
+                <div class="course-card">
+                    <h3>Big Data Analytics</h3>
+                    <p class="semester">Available: Spring</p>
+                    <p>Data processing and analysis with distributed systems. Tools and techniques for handling large-scale datasets.</p>
+                </div>
+
+                <div class="course-card">
+                    <h3>Internet of Things (IoT)</h3>
+                    <p class="semester">Available: Fall, Summer</p>
+                    <p>IoT system design, sensor networks, and embedded systems. Practical projects with microcontrollers and sensors.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Registration Info -->
+        <section class="registration-section">
+            <h2>Course Registration Information</h2>
+            <div class="info-box">
+                <h3>Prerequisites</h3>
+                <p>Most core courses have no prerequisites. Advanced courses require completion of foundational courses. Check the course syllabus for specific requirements.</p>
+            </div>
+            <div class="info-box">
+                <h3>Credit Hours</h3>
+                <p>Most courses are 3 credit hours. Lab courses may be 4 credit hours. Please refer to the academic calendar for exact credit information.</p>
+            </div>
+            <div class="info-box">
+                <h3>Class Schedule</h3>
+                <p>Classes are offered in morning and evening sessions to accommodate different student schedules. Online and hybrid options available.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Computer Science Department. All rights reserved.</p>
+            <p>University | Advancing Technology and Innovation</p>
+        </div>
+    </footer>
+
+    <style>
+        .courses-section {
+            padding: 2rem 0;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .courses-section h2 {
+            font-size: 1.8rem;
+            margin-top: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+
+        .courses-section h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .course-card {
+            background: white;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .course-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 8px 16px rgba(30, 64, 175, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .course-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .course-card .semester {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .course-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .registration-section {
+            background-color: var(--light-bg);
+            padding: 3rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+
+        .registration-section h2 {
+            margin-top: 0;
+        }
+
+        .info-box {
+            background: white;
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 4px;
+        }
+
+        .info-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .info-box p {
+            color: var(--text-light);
+        }
+
+        @media (max-width: 768px) {
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .registration-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</body>
+</html>

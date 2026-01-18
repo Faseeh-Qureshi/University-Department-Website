@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Computer Science Department</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1>CS Department</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Get In Touch</h1>
+            <p>We'd Love to Hear From You</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="contact-container">
+            <!-- Contact Information -->
+            <section class="contact-info-section">
+                <h2>Contact Information</h2>
+                
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <h3>📍 Main Office</h3>
+                        <p><strong>Address:</strong><br>Computer Science Department<br>Building A, Room 100<br>University Campus<br>City, State 12345</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>📞 Phone Numbers</h3>
+                        <p><strong>Main Office:</strong><br>+1 (555) 123-4567<br><strong>Admissions:</strong><br>+1 (555) 123-4568<br><strong>Faculty Directory:</strong><br>+1 (555) 123-4569</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>📧 Email Addresses</h3>
+                        <p><strong>General Inquiries:</strong><br>info@cs.university.edu<br><strong>Admissions:</strong><br>admissions@cs.university.edu<br><strong>Department Head:</strong><br>chair@cs.university.edu</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>🕐 Office Hours</h3>
+                        <p><strong>Monday - Friday:</strong><br>9:00 AM - 5:00 PM<br><strong>Saturday:</strong><br>10:00 AM - 2:00 PM<br><strong>Sunday:</strong><br>Closed</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Form -->
+            <section class="contact-form-section">
+                <h2>Send us a Message</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">-- Select a Subject --</option>
+                            <option value="admissions">Admissions Inquiry</option>
+                            <option value="courses">Course Information</option>
+                            <option value="internship">Internship Opportunities</option>
+                            <option value="research">Research Opportunities</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </section>
+        </div>
+
+        <!-- Quick Links -->
+        <section class="quick-contact-section">
+            <h2>Quick Links</h2>
+            <div class="quick-links-grid">
+                <a href="#" class="quick-link">
+                    <h3>📚 Course Catalog</h3>
+                    <p>View our complete course offerings</p>
+                </a>
+                <a href="#" class="quick-link">
+                    <h3>📋 Apply Now</h3>
+                    <p>Start your application online</p>
+                </a>
+                <a href="#" class="quick-link">
+                    <h3>👨‍🏫 Faculty Directory</h3>
+                    <p>Search faculty by name or specialty</p>
+                </a>
+                <a href="#" class="quick-link">
+                    <h3>🗓️ Events Calendar</h3>
+                    <p>Upcoming seminars and workshops</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section">
+            <h2>Visit Us</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9835506437607!2d-74.0059413!3d40.7127753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDC40cwMjcuNiJOIDc0wrAw!5e0!3m2!1sen!2sus!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <p class="map-note">Building A is located in the center of the campus. Street parking is available. For driving directions, visit Google Maps.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Computer Science Department. All rights reserved.</p>
+            <p>University | Advancing Technology and Innovation</p>
+        </div>
+    </footer>
+
+    <style>
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .contact-info-section h2,
+        .contact-form-section h2,
+        .quick-contact-section h2,
+        .map-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+
+        .contact-cards {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .contact-card {
+            background: white;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 8px 16px rgba(30, 64, 175, 0.15);
+        }
+
+        .contact-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-card p {
+            color: var(--text-dark);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .contact-form .btn {
+            align-self: flex-start;
+            margin-top: 0.5rem;
+        }
+
+        /* Quick Links */
+        .quick-contact-section {
+            margin-bottom: 4rem;
+        }
+
+        .quick-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .quick-link {
+            display: block;
+            background: white;
+            border: 2px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            color: inherit;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .quick-link:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 8px 16px rgba(30, 64, 175, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .quick-link h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .quick-link p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Map Section */
+        .map-section {
+            margin-bottom: 3rem;
+        }
+
+        .map-container {
+            background: var(--light-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .map-note {
+            color: var(--text-light);
+            text-align: center;
+            font-size: 0.95rem;
+            padding: 0 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-links-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .map-container {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-cards {
+                gap: 1rem;
+            }
+
+            .contact-card {
+                padding: 1rem;
+            }
+
+            .contact-form-section h2,
+            .quick-contact-section h2,
+            .map-section h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</body>
+</html>
