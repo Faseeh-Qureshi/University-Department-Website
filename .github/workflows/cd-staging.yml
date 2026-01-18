@@ -5,6 +5,13 @@ on:
     branches:
       - 'release/**'
 
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+  id-token: write
+
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
@@ -55,7 +62,11 @@ jobs:
           STAGING_RENDER_SERVICE_ID: ${{ secrets.STAGING_RENDER_SERVICE_ID }}
         run: |
           echo "Triggering Render deploy for staging service..."
-          curl --no-buffer -X POST "https://api.render.com/deploy/srv-${STAGING_RENDER_SERVICE_ID}?key=${RENDER_API_KEY}"
+          curl -s -o /dev/null -w "%{http_code}" -X POST \
+            "https://api.render.com/v1/services/${STAGING_RENDER_SERVICE_ID}/deploys" \
+            -H "Authorization: Bearer ${RENDER_API_KEY}" \
+            -H "Content-Type: application/json" \
+            -d '{}'
 
       - name: Verify deployment
         run: |

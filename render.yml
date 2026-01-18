@@ -1,0 +1,34 @@
+services:
+  # Development Environment
+  - type: web
+    name: cs-dept-dev
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    branch: develop
+    plan: free
+    envVars:
+      - key: ENVIRONMENT
+        value: development
+
+  # Staging Environment  
+  - type: web
+    name: cs-dept-staging
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    branch: release/v1.0.0
+    plan: starter
+    envVars:
+      - key: ENVIRONMENT
+        value: staging
+
+  # Production Environment
+  - type: web
+    name: cs-dept-prod
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    branch: main
+    plan: starter
+    autoDeployTrigger: off
+    envVars:
+      - key: ENVIRONMENT
+        value: production
